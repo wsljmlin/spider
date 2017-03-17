@@ -1,0 +1,38 @@
+{% if data %}
+<div class="tab-content">
+  <div class="tab-pane active">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>来源</th>
+          <th>模块</th>
+          <th>分类</th>
+          <th>节目数</th>
+          <th>子节目数</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for d in data %}
+        <tr>
+          <th>{{ d['source'] }}</th>
+          <th>{{ d['spider'] }}</th>
+          <th>{{ d['category'] }}</th>
+          {% if d['programCount'] %}
+          <th><a href="#">{{ d['programCount'] }}</a></th>
+          {% else %}
+          <th>0</th>
+          {% endif %}
+          {% if d['subProgramCount'] %}
+          <th><a href="#">{{ d['subProgramCount'] }}</a></th>
+          {% else %}
+          <th>0</th>
+          {% endif %}
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% else %}
+  <div class="none col-md-offset-2" style="margin-top: 130px; font-size: 50px;">木有数据！</div>
+{% endif %}

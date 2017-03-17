@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content -%}
+<div class="container">
+        <div class="row">
+            <div class="col-md-3" >
+                <ul class="list-group">
+                    <li href="#" class="list-group-item active" onclick="javascript:window.location.href='../statistic'"> 爬虫数据统计</li>
+                    <br>
+                    <li href="#" class="list-group-item list-group-item-success"
+                        data-toggle="collapse" onclick=""
+                        data-toggle="collapse"  data-target="#spider"> 爬虫管理后台</li>
+                        <div id="spider"  class="list-group collapse in">
+                            <a class="list-group-item" value="" onclick="javascript:window.location.href='./album'">临时爬取</a>
+                            <a class="list-group-item" value="" onclick="javascript:window.location.href='./cron'">定时爬取</a>
+                            <a class="list-group-item" value="" onclick="javascript:window.location.href='./mfsp'">蜜蜂视频搜索</a>
+                        </div>
+                </ul>
+            </div>
+            <div class="col-md-9">
+                    {% block left -%}
+                    {%- endblock left %}
+            </div>
+        </div>
+    <div class="row">
+         <div class="col-md-9" >
+            {% block end -%}
+            {%- endblock end %}
+         </div>
+    </div>
+</div>
+
+<script>
+    $('a.list-group-item').on("click",function(){
+        $('a.list-group-item').removeClass('list-group-item-warning');
+        $(this).addClass('list-group-item-warning');});
+</script>
+{%- endblock content %}

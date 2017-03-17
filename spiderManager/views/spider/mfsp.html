@@ -1,0 +1,39 @@
+{% extends "spider/spider.html" %}
+{% block left -%}
+<div class="page-header">
+  <h1>搜索内容仅支持数字和字母<small></small></h1>
+</div>
+<ul>
+    {% import "bootstrap/wtf.html" as wtf %}
+    {{ wtf.quick_form(form, form_type='horizontal', horizontal_columns=('lg', 3, 6), button_map={'submitButton': 'success'}) }}
+</ul>
+{% if data %}
+<div class="tab-content">
+  <div class="tab-pane active">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>节目名</th>
+          <th>节目类型</th>
+          <th>种子</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for d in data %}
+        <tr>
+          <th>{{ d['name'] }}</th>
+          <th>{{ d['type'] }}</th>
+          <th>{{ d['url'] }}</th>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endif %}
+{%- endblock left %}
+
+{% block end -%}
+
+{%- endblock end %}
+{% block scripts %}
+{% endblock scripts %}

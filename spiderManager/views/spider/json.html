@@ -1,0 +1,133 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='json/json.css') }}">
+<script src="{{ url_for('static', filename='json/json.js') }}"></script>
+<script>
+    window._dateObj = new Date();
+    window._regexpObj = new RegExp();
+    window.ImgCollapsed = "{{ url_for('static', filename='json/Collapsed.gif') }}"
+    //json展开图片（-号）
+    window.ImgExpanded = "{{ url_for('static', filename='json/Expanded.gif') }}"
+    $(window).load(function() {
+        if($id("RawJson").value != ""){
+            $('#shuaxin').click();
+        };
+    });
+    function shangchuan(){
+        $.post(
+         "{{ url_for('spider.shangchuan') }}",
+         {jsonData:$id("RawJson").value},
+         function(){
+
+         });
+        };
+    function save(){
+        $.post(
+             "{{ url_for('spider.save') }}",
+             {nameSave:$id("nameSave").value,
+              urlSave:$id("urlSave").value,
+              spiderSave:$id("spiderSave").value,
+              runtimeSave:$id("runtimeSave").value
+             },
+             function(){
+                $('#cronClose').click();
+             });
+    }
+</script>
+      <div class="btn-group">
+          <button id="shuaxin" type="button" class="btn btn-success" onclick="Process()">刷新</button>
+          <button id="shangchuan" type="button" class="btn btn-success"  data-toggle="modal" data-target="#shangchuanModal" onclick="shangchuan()">上传</button>
+          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#cronModal">保存</button>
+      </div>
+      <span id="TabSizeHolder">缩进量
+      <select id="TabSize" onchange="TabSizeChanged()">
+        <option value="1">1</option>
+        <option value="2" selected="true">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select></span>
+      <label for="QuoteKeys">
+      <input type="checkbox" id="QuoteKeys" onclick="QuoteKeysClicked()" checked="true" /> 引号</label>
+      <a href="javascript:void(0);" onclick="SelectAllClicked()">全选</a>
+      <span id="CollapsibleViewHolder">
+        <label for="CollapsibleView">
+        <input type="checkbox" id="CollapsibleView" onclick="CollapsibleViewClicked()" checked="true" /> 显示控制</label>
+      </span>
+      <span id="CollapsibleViewDetail">
+      <a href="javascript:void(0);" onclick="ExpandAllClicked()">展开</a>
+      <a href="javascript:void(0);" onclick="CollapseAllClicked()">叠起</a>
+      <a href="javascript:void(0);" onclick="CollapseLevel(3)">2级</a>
+      <a href="javascript:void(0);" onclick="CollapseLevel(4)">3级</a>
+      <a href="javascript:void(0);" onclick="CollapseLevel(5)">4级</a>
+      <a href="javascript:void(0);" onclick="CollapseLevel(6)">5级</a>
+      <a href="javascript:void(0);" onclick="CollapseLevel(7)">6级</a>
+      <a href="javascript:void(0);" onclick="CollapseLevel(8)">7级</a>
+      <a href="javascript:void(0);" onclick="CollapseLevel(9)">8级</a></span></div>
+    </div>
+<br>
+<div id="Canvas" class="Canvas"></div>
+<textarea id="RawJson" style="display: none">{{jsonData}}</textarea>
+
+<div class="modal fade" id="shangchuanModal" tabindex="-1" role="dialog" aria-labelledby="shangchuanModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="shangchuanModalLabel">上传提示</h4>
+            </div>
+            <div class="modal-body">数据已经上传。</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<div class="modal fade" id="cronModal" tabindex="-1" role="dialog" aria-labelledby="cronModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="cronModalLabel">任务保存</h4>
+            </div>
+            <div class="modal-body">
+                <form1 class="form-horizontal" role="form" method="post" action="url_for('save')">
+                  <div class="form-group">
+                    <label for="nameSave" class="col-sm-3 control-label">节目名称：</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="nameSave" placeholder="Name" value="{{nameSave}}"  readonly>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="urlSave" class="col-sm-3 control-label">种子url：</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="urlSave" placeholder="Url"  value="{{urlSave}}"  readonly>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="spiderSave" class="col-sm-3 control-label">爬虫模块：</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="spiderSave" placeholder="Spider"  value="{{spiderSave}}" readonly>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="runtimeSave" class="col-sm-3 control-label">执行时间：</label>
+                    <div class="col-sm-8">
+                      <select type="text" class="form-control" id="runtimeSave" placeholder="Runtime">
+                          {% for runtime in runtimeSave %}
+                          <option value="{{runtime}}">{{runtimeSave[runtime]}}</option>
+                          {% endfor %}
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-8">
+                      <button id="cronSave" type="submit" class="btn btn-success" onclick="save()">保存</button>
+                      <button id="cronClose" type="button" class="btn btn-success" data-dismiss="modal">关闭</button>
+                    </div>
+                  </div>
+                </form1>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>

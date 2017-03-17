@@ -1,0 +1,244 @@
+#!/usr/bin/env python
+#encoding=UTF-8
+import re
+import sys
+import json
+import os
+import time
+import copy
+import codecs
+import urllib
+import base64
+from spiderTool import spiderTool
+from vipmediaContent import BASE_CONTENT
+from vipmediaContent import PROGRAM_SUB
+from bs4 import BeautifulSoup
+
+
+class all_sohu_vipmovie():
+    def __init__(self):
+        print "Do spider all_sohu_vipmovie."
+        self.program = copy.deepcopy(BASE_CONTENT["program"])
+        self.program_sub = PROGRAM_SUB
+        self.seedBase = ["http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p101_p11_p124_p13.html"
+                         , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p101_p11_p124_p13.html"
+                         , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p102_p11_p124_p13.html"
+                         , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p103_p11_p124_p13.html"
+                         , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p104_p11_p124_p13.html"
+                         , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p105_p11_p124_p13.html"
+                         , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p106_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p107_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p108_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p109_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1010_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1011_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1012_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1013_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1014_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1015_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1016_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1017_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1018_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1019_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1020_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1021_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1022_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1023_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1024_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1025_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1026_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1027_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1028_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1029_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1030_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1031_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1032_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1033_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1034_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1035_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1036_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1037_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1038_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1039_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1040_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1041_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1042_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1043_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1044_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1045_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1046_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1047_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1048_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1049_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1050_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1051_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1052_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1053_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1054_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1055_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1056_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1057_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1058_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1059_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1060_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1061_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1062_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1063_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1064_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1065_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1066_p11_p124_p13.html"
+                         # , "http://so.tv.sohu.com/list_p1100_p2_p3_p4_p5_p6_p73_p8_p9_p1067_p11_p124_p13.html"
+                        ]
+        self.seedList = []
+        self.dataDir = '.' + os.path.sep + 'data'
+        self.today = time.strftime('%Y%m%d', time.localtime())
+        self.seqNocnt = 1
+        self.dataFile = spiderTool.openFile(self.dataDir + os.path.sep + "all_sohu_vipmovie_" + self.today + ".txt")
+
+    def __del__(self):
+        if self.dataFile is not None:
+            self.dataFile.close()
+
+    def doProcess(self):
+        for seed in self.seedBase:
+            self.seedList = []
+            seedList = []
+            doc = spiderTool.getHtmlBody(seed)
+            soup = BeautifulSoup(doc, from_encoding="utf8")
+            seed_P = soup.find("ul", attrs={"class": "st-list cfix"})
+            if seed_P is not None:
+                seedList = seed_P.find_all("li")
+            for each in seedList:
+                a_tag = each.find("a", attrs={"target": "_blank"})
+                if a_tag is not None:
+                    subSeed = a_tag.get("href")
+                    if subSeed is not None:
+                        subSeed = "http:%s" % subSeed
+                        self.seedList.append(subSeed)
+            self.seedSpider()
+
+    def seedSpider(self):
+        for seed in self.seedList:
+            self.program = copy.deepcopy(BASE_CONTENT["program"])
+            self.firstSpider(seed)
+            self.program['pcUrl'] = seed
+            self.program["ptype"] = "电影".decode("utf8")
+            self.program['website'] = '搜狐'.decode("utf8")
+            self.program['getTime'] = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())
+            self.program['totalSets'] = len(self.program['programSub'])
+            #print self.program["name"],self.program['totalSets']
+            if self.program['name'] == '' or self.program['name'] is None \
+                    or self.program['mainId'] == ''or self.program['mainId'] is None \
+                    or self.program['totalSets'] < 1:
+                continue
+            # add seqnum
+            self.program['seqNo'] = self.seqNocnt
+            self.seqNocnt = self.seqNocnt + 1
+
+            json.dumps(PROGRAM_SUB)
+            content = {'program': self.program}
+            str = json.dumps(content)
+            self.dataFile.write(str + '\n')
+
+    def firstSpider(self, seed):
+        point = 0.0
+        poster = ""
+        name = ""
+        shootYear = ""
+        alias = ""
+        area = ""
+        star = ""
+        director = ""
+        ctype = ""
+        playTimes = 0
+        intro = ""
+        mainId = ""
+
+        doc = spiderTool.getHtmlBody(seed)
+        if re.search(r'playlistId\s*=\s*"(\d+)"', doc):
+            mainId = re.search(r'playlistId\s*=\s*"(\d+)"', doc).group(1)
+        elif re.search(r'PLAYLIST_ID\s*=\s*"(\d+)"', doc):
+            mainId = re.search(r'PLAYLIST_ID\s*=\s*"(\d+)"', doc).group(1)
+        elif re.search(r'http://film\.sohu\.com/album/(\d+)\.html', seed):
+            mainId = re.search(r'http://film\.sohu\.com/album/(\d+)\.html', seed).group(1)
+        else:
+            return
+
+        seed = "http://pl.hd.sohu.com/videolist?playlistid=%s&callback=__get_videolist" %(mainId)
+        try:
+            doc = spiderTool.getHtmlBody(seed).decode('gbk').encode('utf8')
+            doc = doc.split('__get_videolist(')[1][:-2]
+            data = json.loads(doc)
+        except:
+            return
+
+        if data.has_key('albumName'):
+            name = data['albumName']
+        if data.has_key('mainActors'):
+            star = ','.join(data['mainActors'])
+        if data.has_key('categories'):
+            ctype = ','.join(data['categories'])
+        if data.has_key('publishYear'):
+            shootYear = str(data['publishYear'])
+        if data.has_key('albumDesc'):
+            intro = data['albumDesc']
+        if data.has_key('largeVerPicUrl'):
+            poster = data['largeVerPicUrl']
+        if data.has_key('directors'):
+            director = ','.join(data['directors'])
+        if data.has_key('area'):
+            area = data['area']
+
+        self.program["name"] = spiderTool.changeName(name)
+        self.program["alias"] = spiderTool.changeName(alias)
+        self.program["point"] = float(point)
+        self.program['poster'] = spiderTool.listStringToJson('url',poster)
+        self.program['star'] = spiderTool.listStringToJson('name',star)
+        self.program['director'] = spiderTool.listStringToJson('name',director)
+        self.program['ctype'] = spiderTool.listStringToJson('name',ctype)
+        self.program['shootYear'] = shootYear
+        self.program['area'] = spiderTool.listStringToJson('name', area)
+        self.program['playTimes'] = long(playTimes)
+        self.program['intro'] = intro
+        self.program['mainId'] = mainId
+
+        if data.has_key('videos'):
+            videos = data['videos']
+            self.secondSpider(videos)
+
+
+    def secondSpider(self, videos):
+        for each in videos:
+            self.program_sub = copy.deepcopy(PROGRAM_SUB)
+            setNumber = ""
+            setName = ""
+            webUrl = ""
+            poster = ""
+
+            if each.has_key('name'):
+                setName = each['name']
+            if each.has_key('pageUrl'):
+                webUrl = each['pageUrl']
+            if each.has_key('order'):
+                setNumber = each['order']
+            if each.has_key('largePicUrl'):
+                poster = each['largePicUrl']
+
+            if re.search(r'预告'.decode('utf8'), setName) or setNumber == "" or setName == "" or webUrl == ""\
+                    or setNumber is None or setName is None or webUrl is None:
+                continue
+            self.program_sub['setNumber'] = setNumber
+            self.program_sub['setName'] = self.program['name']
+            self.program_sub['webUrl'] = webUrl
+            self.program_sub['poster'] = poster
+            self.program['programSub'].append(self.program_sub)
+            #movie will only have one
+            return
+
+if __name__ == '__main__':
+    app = all_sohu_vipmovie()
+    if len(sys.argv) > 1:
+        app.seedList = spiderTool.readSeedList(sys.argv[1])
+        app.seedSpider()
+    else:
+        app.doProcess()

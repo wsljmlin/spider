@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" readonly="true" id="8970bcab-7f3e-426f-b0ba-6778a4e1551f" name="Default" comment="" />
+    <ignored path="spiderManager.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <file path="/hellow.html" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1467953495787" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/data/all_ppypp_movie_20160705.txt" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1467705400571" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/seed.txt" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1476339752256" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/all_ppypp_movie.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1467717359709" ignored="false" />
+    <file path="/base.html" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468810418662" ignored="false" />
+    <file path="/login.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468042587653" ignored="false" />
+    <file path="/index.html" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1472719887986" ignored="false" />
+    <file path="/index.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468757040060" ignored="false" />
+    <file path="/__init__.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474525170732" ignored="false" />
+    <file path="/run.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1476342412451" ignored="false" />
+    <file path="/spider.html" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1476341579815" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/mgtv_tv.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468912572082" ignored="false" />
+    <file path="/mgtv_tv.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468912558298" ignored="false" />
+    <file path="/account.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468832096637" ignored="false" />
+    <file path="/account.html" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468834358421" ignored="false" />
+    <file path="/spider.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1476417461343" ignored="false" />
+    <file path="/static.html" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468905346210" ignored="false" />
+    <file path="/static.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468907130489" ignored="false" />
+    <file path="/config.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1475975174183" ignored="false" />
+    <file path="/mongodb.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1473384000546" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/mongodb.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1472708071329" ignored="false" />
+    <file path="/data.html" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1469000281168" ignored="false" />
+    <file path="/statistic.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1473384038930" ignored="false" />
+    <file path="/statistic.html" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1472778205146" ignored="false" />
+    <file path="/iqiyicartoon1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468911369407" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/iqiyicartoon1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468911386010" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/iqiyimovie1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468911444801" ignored="false" />
+    <file path="/iqiyimovie1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468911430633" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/iqiyishort1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468911495584" ignored="false" />
+    <file path="/iqiyishort1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468911488422" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/iqiyishort2.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468911528945" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/iqiyishort3.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468911566110" ignored="false" />
+    <file path="/iqiyishort3.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468911557606" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/iqiyitv1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468911605386" ignored="false" />
+    <file path="/iqiyitv1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468911585323" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/iqiyivariety1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468911649408" ignored="false" />
+    <file path="/iqiyivariety1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468911632642" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/iqiyi_variety_2.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468911692176" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/le_variety1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468911735047" ignored="false" />
+    <file path="/le_variety1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468911706080" ignored="false" />
+    <file path="/leshort1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468911748865" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/leshort1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468911761403" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/mgtv_variety_1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468911805878" ignored="false" />
+    <file path="/mgtvshort1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468911820199" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/mgtvshort1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468911833673" ignored="false" />
+    <file path="/qqshort1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468911855081" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/qqshort1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468911870499" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/qqtv1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468911910320" ignored="false" />
+    <file path="/qqtv1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468911897506" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/qqtv2.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468911949995" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/qqvariety1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468911979891" ignored="false" />
+    <file path="/qqvariety1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468911967115" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/qqvariety2.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468912010533" ignored="false" />
+    <file path="/youkumovie1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468912340596" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/youkumovie1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468912037491" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/youkushort1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468912087300" ignored="false" />
+    <file path="/youkushort1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468912082175" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/youkushort2.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468912117375" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/youkushort3.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468912149277" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/youkutv1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468912179944" ignored="false" />
+    <file path="/youkutv1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468912163841" ignored="false" />
+    <file path="/youkuvariety1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468912229868" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/youkuvariety1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468912245468" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/youku_movie_1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1468912340596" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/all_le_movie.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1470205939461" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/data/all_le_movie_20160803.txt" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1470206055395" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/news_le_1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1470206323412" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/beauty/beauty_mmwu_1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1472796223285" ignored="false" />
+    <file path="/beauty_mmwu_1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1472796187912" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/beauty/data/beauty_mmwu_1_20160902.txt" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1472796236645" ignored="false" />
+    <file path="/spiderTmp.html" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1476339102016" ignored="false" />
+    <file path="/spiderModel.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474608628310" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/ablumsspider/iqiyi_tv_1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1475053496312" ignored="false" />
+    <file path="/iqiyi_tv_1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1475053325203" ignored="false" />
+    <file path="/mysqldb.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1473321903784" ignored="false" />
+    <file path="/json.html" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474947638211" ignored="false" />
+    <file path="/spiderModel.html" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1473649178417" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/ablumsspider/iqiyi_variety_1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474164435117" ignored="false" />
+    <file path="/iqiyi_variety_1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474164433713" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/ablumsspider/ablum_iqiyi_variety_1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474164708406" ignored="false" />
+    <file path="/json.js" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474263988129" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/mfsp/all_mfsp_cartoon.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474253844103" ignored="false" />
+    <file path="/all_mfsp_cartoon.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1476348450178" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/mfsp/all_mfsp_movie.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474254288506" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/mfsp/all_mfsp_real.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474254178444" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/mfsp/all_mfsp_tv.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474254194569" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/mfsp/all_mfsp_variety.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474254216818" ignored="false" />
+    <file path="/all_youku_cartoon.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1476416903740" ignored="false" />
+    <file path="/cron.sh" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1475976216765" ignored="false" />
+    <file path="/spiderCron.html" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1477640704805" ignored="false" />
+    <file path="/spiderCron.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1476065279162" ignored="false" />
+    <file path="/all_youku_tv.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1476416942899" ignored="false" />
+    <file path="/all_youku_movie.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1476416918654" ignored="false" />
+    <file path="/all_youku_real.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1476416931641" ignored="false" />
+    <file path="/all_youku_variety.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1476416956098" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/qq/all_qq_cartoon.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474596108842" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/mgtv/all_mgtv_cartoon.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474596289410" ignored="false" />
+    <file path="/all_iqiyi_cartoon.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474600774339" ignored="false" />
+    <file path="/all_iqiyi_movie.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474600779991" ignored="false" />
+    <file path="/spiderCronInsert.html" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474781444076" ignored="false" />
+    <file path="/all_iqiyi_real.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474851761387" ignored="false" />
+    <file path="/all_iqiyi_tv.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474851768963" ignored="false" />
+    <file path="/all_iqiyi_variety.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474851775430" ignored="false" />
+    <file path="/all_le_cartoon.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474851782718" ignored="false" />
+    <file path="/all_le_movie.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474851792128" ignored="false" />
+    <file path="/all_le_real.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474851798523" ignored="false" />
+    <file path="/all_le_tv.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474851804983" ignored="false" />
+    <file path="/all_le_variety.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474851811006" ignored="false" />
+    <file path="/all_mgtv_cartoon.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474851816259" ignored="false" />
+    <file path="/all_mgtv_movie.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474851823239" ignored="false" />
+    <file path="/all_mgtv_real.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474851828383" ignored="false" />
+    <file path="/all_mgtv_tv.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474851834811" ignored="false" />
+    <file path="/all_pptv_cartoon.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474851842198" ignored="false" />
+    <file path="/all_pptv_movie.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474851846714" ignored="false" />
+    <file path="/all_pptv_tv.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474851851099" ignored="false" />
+    <file path="/all_pptv_variety.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474851855836" ignored="false" />
+    <file path="/all_qq_cartoon.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474851861369" ignored="false" />
+    <file path="/all_qq_movie.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474851866215" ignored="false" />
+    <file path="/all_qq_tv.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474851871181" ignored="false" />
+    <file path="/all_qq_variety.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474851877319" ignored="false" />
+    <file path="/save.html" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1474944838142" ignored="false" />
+    <file path="/cron.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1476064385045" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/ablumsspider/mgtv_tv_1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1475054044842" ignored="false" />
+    <file path="/mgtv_tv_1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1475054044842" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/ablumsspider/youku_tv_1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1475135044281" ignored="false" />
+    <file path="/youku_tv_1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1475135016910" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/youku/all_youku_tv.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1475135137361" ignored="false" />
+    <file path="/cronTmp.sh" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1476001400318" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/youku/all_youku_cartoon.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1476146544989" ignored="false" />
+    <file path="/youku_variety_1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1476179230552" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/ablumsspider/youku_variety_1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1476175497157" ignored="false" />
+    <file path="/mfsp.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1476342281792" ignored="false" />
+    <file path="/mfsp.html" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1476347682915" ignored="false" />
+    <file path="/all_mfsp_movie.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1476348459836" ignored="false" />
+    <file path="/all_mfsp_real.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1476348464555" ignored="false" />
+    <file path="/all_mfsp_tv.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1476348467984" ignored="false" />
+    <file path="/all_mfsp_variety.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1476348471216" ignored="false" />
+    <file path="/ablum_youku_dota.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1476415707369" ignored="false" />
+    <file path="/ablum_youku_fps.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1476415688101" ignored="false" />
+    <file path="/ablum_youku_game.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1476415723541" ignored="false" />
+    <file path="/ablum_youku_yxlm.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1476415730140" ignored="false" />
+    <file path="$PROJECT_DIR$/../ablumsspider/game/ablum_youku_fps.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1476415191428" ignored="false" />
+    <file path="/ablum_iqiyi_variety_1.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1476670137231" ignored="false" />
+    <file path="/ablum_iqiyi_variety_3.py" changelist="8970bcab-7f3e-426f-b0ba-6778a4e1551f" time="1476670916296" ignored="false" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="spiderManager" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="spiderCron.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/spider/spiderCron.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="57" column="28" selection-start="3117" selection-end="3117" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spider.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/route/spider.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="62" column="13" selection-start="2087" selection-end="2087" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/route/login.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="48" selection-start="1242" selection-end="1242" vertical-scroll-proportion="0.59863013">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="statistic.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/route/statistic.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="json.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/spider/json.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="26" selection-start="570" selection-end="570" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mfsp.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/spider/mfsp.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/spiderModel/ablum_youku_yxlm.py" />
+        <option value="$PROJECT_DIR$/spiderModel/all_youku_cartoon.py" />
+        <option value="$PROJECT_DIR$/spiderModel/all_youku_movie.py" />
+        <option value="$PROJECT_DIR$/spiderModel/all_youku_real.py" />
+        <option value="$PROJECT_DIR$/spiderModel/all_youku_tv.py" />
+        <option value="$PROJECT_DIR$/spiderModel/all_youku_variety.py" />
+        <option value="$PROJECT_DIR$/spiderModel/ablum_iqiyi_variety_1.py" />
+        <option value="$PROJECT_DIR$/spiderModel/ablum_iqiyi_variety_3.py" />
+        <option value="$PROJECT_DIR$/spiderModel/all_sohu_cartoon.py" />
+        <option value="$PROJECT_DIR$/spiderModel/all_sohu_movie.py" />
+        <option value="$PROJECT_DIR$/spiderModel/all_sohu_real.py" />
+        <option value="$PROJECT_DIR$/spiderModel/all_sohu_tv.py" />
+        <option value="$PROJECT_DIR$/spiderModel/all_sohu_variety.py" />
+        <option value="$PROJECT_DIR$/route/spider.py" />
+        <option value="$PROJECT_DIR$/views/spider/spiderCron.html" />
+        <option value="$PROJECT_DIR$/route/login.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1432" />
+    <option name="y" value="-8" />
+    <option name="width" value="1456" />
+    <option name="height" value="916" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Python</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>PyArgumentListInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spiderManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spiderManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spiderManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="reference.settings.ide.settings.spelling" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ablumsspider" />
+    <property name="FullScreen" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <PyConsoleSettings />
+    </option>
+    <option name="myDjangoConsoleState">
+      <PyConsoleSettings />
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\tvfan_big_data\spiderManager\spiderModel" />
+      <recent name="D:\tvfan_big_data\spiderManager" />
+      <recent name="D:\tvfan_big_data\spiderManager\views" />
+      <recent name="D:\tvfan_big_data\spiderManager\views\spider" />
+      <recent name="D:\tvfan_big_data\spiderManager\views\static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\tvfan_big_data\spiderManager\views\spider" />
+      <recent name="D:\tvfan_big_data\spiderManager\spiderModel" />
+      <recent name="D:\tvfan_big_data\spiderManager" />
+      <recent name="D:\tvfan_big_data\spiderManager\static\json" />
+      <recent name="D:\tvfan_big_data\spiderManager\views" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.all_pptv_variety">
+    <configuration default="false" name="mongodb" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="spiderManager" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/mongodb.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="all_pptv_variety" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/spiderModel" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="spiderManager" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spiderModel/all_pptv_variety.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="spiderManager" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="spiderManager" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="spiderManager" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Python.mongodb" />
+      <item index="1" class="java.lang.String" itemvalue="Python.all_pptv_variety" />
+    </list>
+    <recent_temporary>
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Python.all_pptv_variety" />
+        <item index="1" class="java.lang.String" itemvalue="Python.mongodb" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="true" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <configuration useDefault="false">C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8970bcab-7f3e-426f-b0ba-6778a4e1551f" name="Default" comment="" />
+      <created>1467352381621</created>
+      <updated>1467352381621</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1432" y="-8" width="1456" height="916" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19296987" sideWeight="0.67107004" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3989432" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="true" />
+    <option name="myTodoPanelSettings">
+      <value>
+        <are-packages-shown value="false" />
+        <are-modules-shown value="false" />
+        <flatten-packages value="false" />
+        <is-autoscroll-to-source value="false" />
+      </value>
+    </option>
+    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
+    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
+    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
+    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
+    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
+    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
+    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
+    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
+    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
+    <option name="LIMIT_HISTORY" value="true" />
+    <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
+    <option name="UPDATE_FILTER_SCOPE_NAME" />
+    <option name="USE_COMMIT_MESSAGE_MARGIN" value="false" />
+    <option name="COMMIT_MESSAGE_MARGIN_SIZE" value="72" />
+    <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
+    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
+    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
+    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
+    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
+    <option name="ACTIVE_VCS_NAME" />
+    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
+    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
+    <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
+    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
+    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/spiderModel/all_pptv_cartoon.py</url>
+          <line>97</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="3" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/spiderModel/ablum_youku_dota.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="54" selection-start="3719" selection-end="3719" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spiderModel/ablum_youku_fps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="32" selection-start="3273" selection-end="3273" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spiderModel/all_youku_variety.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="163" column="60" selection-start="6810" selection-end="6810" vertical-scroll-proportion="0.022592152" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spiderModel/youku_variety_1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="26" selection-start="3601" selection-end="3619" vertical-scroll-proportion="0.022592152" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spiderModel/ablum_iqiyi_variety_3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="38" selection-start="1996" selection-end="2022" vertical-scroll-proportion="0.026027398" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spiderModel/all_sohu_cartoon.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="0" selection-start="3212" selection-end="3212" vertical-scroll-proportion="0.026027398" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spiderModel/all_sohu_movie.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="0" selection-start="3206" selection-end="3206" vertical-scroll-proportion="0.026027398" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spiderModel/all_sohu_real.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="38" selection-start="3157" selection-end="3157" vertical-scroll-proportion="0.026027398" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spiderModel/all_sohu_tv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="38" selection-start="3169" selection-end="3169" vertical-scroll-proportion="0.026027398" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spiderModel/all_sohu_variety.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="24" selection-start="3190" selection-end="3190" vertical-scroll-proportion="0.052054796" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/spider/json.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="26" selection-start="570" selection-end="570" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/spider/spiderCron.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="28" selection-start="3117" selection-end="3117" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/spider/mfsp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/route/statistic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/route/spider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="13" selection-start="2087" selection-end="2087" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/route/login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="48" selection-start="1242" selection-end="1242" vertical-scroll-proportion="0.59863013">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

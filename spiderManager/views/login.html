@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content -%}
+ <div class="container-fluid">
+    <br>
+    <div class="row">
+    <div class="col-md-6 col-md-offset-3" >
+      {% import "bootstrap/wtf.html" as wtf %}
+      {{ wtf.quick_form(form, form_type='horizontal', horizontal_columns=('lg', 3, 6), button_map={'submitButton': 'success'}) }}
+
+      {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul class="alert alert-danger">
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+      {% endwith %}
+    </div>
+    </div>
+</div>
+{%- endblock content %}

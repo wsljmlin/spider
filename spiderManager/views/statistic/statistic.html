@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block content -%}
+<div class="container">
+        <div class="row">
+            <div class="col-md-3" >
+                <ul class="list-group">
+                    <li href="static" class="list-group-item active"  data-toggle="collapse"  data-target="#static" > 爬虫数据统计</li>
+                    <div id="static"  class="list-group collapse in">
+                        <a class="list-group-item" value="" >全部爬取</a>
+                        <a class="list-group-item" value="all">定时爬取</a>
+                        <a class="list-group-item" value="ablum">专辑爬取</a>
+                        <a class="list-group-item" value="else">其他爬取</a>
+                    </div>
+                    <li href="#" class="list-group-item list-group-item-success"
+                        data-toggle="collapse" onclick="javascript:window.location.href='../spider'"> 爬虫管理后台</li>
+                </ul>
+            </div>
+            <div class="col-md-9">
+                 <div class="input-group date col-md-5 col-md-offset-2">
+                    <span class="input-group-addon" >日期</span>
+                    <input id="timeSelect" type="text" class="form-control">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+                 </div>
+                  <div id="statisticData">
+                      {% include "statistic/data.html" %}
+                  </div>
+            </div>
+        </div>
+</div>
+
+<script>
+    window.tag = "aaa";
+    $('#timeSelect').datetimepicker(
+           { language: "zh-CN",
+            minView: "month", //选择日期后，只显示到日
+            format: 'yyyy-mm-dd',
+            autoclose: true,
+            todayHighlight: true,
+            todayBtn:  true
+    });
+    $('#timeSelect').datetimepicker()
+      .on('changeDate', function(ev){
+        $.get(
+         "{{ url_for('statistic.data') }}",
+         {dateTime: ev.date.valueOf(), tag:window.tag},
+         function(data,textStatus){
+             $('#statisticData').html(data)
+         })
+      });
+    $('.form-control').val('{{ today }}');
+    $('#timeSelect').datetimepicker('update');
+    $('a.list-group-item').on("click",function(){
+        $('a.list-group-item').removeClass('list-group-item-warning');
+        $(this).addClass('list-group-item-warning');
+        window.tag = $(this).attr("value");
+        $.get(
+         "{{ url_for('statistic.data') }}",
+         {dateTime:  $('#timeSelect').val(), tag:$(this).attr("value")},
+         function(data,textStatus){
+             $('#statisticData').html(data)
+         })
+    });
+
+</script>
+{%- endblock content %}

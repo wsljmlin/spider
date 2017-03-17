@@ -1,0 +1,56 @@
+{% extends "spider/spider.html" %}
+{% block left -%}
+                <ul>
+                    {% import "bootstrap/wtf.html" as wtf %}
+                    {{ wtf.quick_form(form, form_type='horizontal', horizontal_columns=('lg', 3, 6), button_map={'submitButton': 'success'}) }}
+                </ul>
+{%- endblock left %}
+{% block end -%}
+           {% include "spider/json.html" %}
+{%- endblock end %}
+{% block scripts %}
+
+<script>
+    $('a.list-group-item').on("click",function(){
+        $('a.list-group-item').removeClass('list-group-item-warning');
+        $(this).addClass('list-group-item-warning');});
+    $('#source').on("change", function(){
+            $('#submitButton').val("1"),
+            $('#submitButton').click()
+            }
+    )
+    $('#source').on("dblclick", function(){
+            $('#submitButton').val("1"),
+            $('#submitButton').click()
+            }
+    )
+    $('#type').on("change", function(){
+            $('#submitButton').val("2"),
+            $('#submitButton').click()
+            }
+    )
+    $('#type').on("dblclick", function(){
+            $('#submitButton').val("2"),
+            $('#submitButton').click()
+            }
+    )
+    $('#spiderModel').on("change", function(){
+            $('#submitButton').val("3"),
+            $('#submitButton').click()
+            }
+    )
+    $('#spiderModel').on("dblclick", function(){
+            $('#submitButton').val("3"),
+            $('#submitButton').click()
+            }
+    )
+    $('#example').on("dblclick", function(){
+            window.open ($(this).val(),'newwindow','height=100,width=400,top=0,left=0,toolbar=no,menubar=no,scrollbars=no, resizable=no,location=no, status=no')
+            }
+    )
+    $('#url').on("dblclick", function(){
+            window.open ($(this).val(),'newwindow','height=100,width=400,top=0,left=0,toolbar=no,menubar=no,scrollbars=no, resizable=no,location=no, status=no')
+            }
+    )
+</script>
+ {%- endblock scripts %}

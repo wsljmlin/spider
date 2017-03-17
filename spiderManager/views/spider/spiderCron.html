@@ -1,0 +1,284 @@
+{% extends "spider/spider.html" %}
+{% block left -%}
+            <div class="col-md-8 col-md-offset-1">
+                  <div  class="input-group col-md-8">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" ><span class="glyphicon glyphicon-film"></span> 节目名称： </button>
+                      </span>
+                      <input id="programName" type="text" class="form-control">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" onclick="getData();initPages();"><span class="glyphicon glyphicon-search"></span> 查找 </button>
+                      </span>
+                  </div>
+                  <br>
+                  <div>
+                      <table id="cronTable" class="table table-bordered">
+                          <thead class="btn-default">
+                                <tr>
+                                    <th width="20" ><input type="checkbox" id="cronTableCheck"></th>
+                                    <th nowrap="nowrap">节目名称</th>
+                                    <th >种子</th>
+                                    <th >爬取模块</th>
+                                    <th >执行时间</th>
+                                </tr>
+                          </thead>
+                           <tbody id="cronTableBody">
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>节目名称</td>
+                                    <td>种子</td>
+                                    <td>爬取模块</td>
+                                    <td>执行时间</td>
+                                </tr>
+                                 <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>节目名称</td>
+                                    <td>种子</td>
+                                    <td>爬取模块</td>
+                                    <td>执行时间</td>
+                                </tr>
+                                 <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>节目名称</td>
+                                    <td>种子</td>
+                                    <td>爬取模块</td>
+                                    <td>执行时间</td>
+                                </tr>
+                           </tbody>
+                      </table>
+                  </div>
+                  <div class="row">
+                      <div class="btn-group">
+                          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#cronModal" onclick="modify()">修改</button>
+                          <button type="button" class="btn btn-success" onclick="javascript:window.location.href='./album'">增加</button>
+                          <button type="button" class="btn btn-success" onclick="del()">删除</button>
+                      <div id="pageSelect" class="btn-group col-md-offset-5">
+                      </div>
+                  </div>
+                  <div>.</div>
+                  <div>.</div>
+            </div>
+        </div>
+
+{%- endblock left %}
+{% block end -%}
+<div class="modal fade" id="cronModal" tabindex="-1" role="dialog" aria-labelledby="cronModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="cronModalLabel">任务修改</h4>
+            </div>
+            <div class="modal-body">
+                <form1 class="form-horizontal" role="form" method="post" action="url_for('save')">
+                  <div class="form-group">
+                    <label for="idSave" class="col-sm-3 control-label">节目id：</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="idSave" placeholder="Id" value="{{idSave}}"  readonly>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="nameSave" class="col-sm-3 control-label">节目名称：</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="nameSave" placeholder="Name" value="{{nameSave}}"  readonly>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="urlSave" class="col-sm-3 control-label">种子url：</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="urlSave" placeholder="Url"  value="{{urlSave}}"  readonly>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="spiderSave" class="col-sm-3 control-label">爬虫模块：</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="spiderSave" placeholder="Spider"  value="{{spiderSave}}" readonly>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="runtimeSave" class="col-sm-3 control-label">执行时间：</label>
+                    <div class="col-sm-8">
+                      <select type="text" class="form-control" id="runtimeSave" placeholder="Runtime">
+                          {% for runtime in runtimeSave %}
+                          <option value="{{runtime}}">{{runtimeSave[runtime]}}</option>
+                          {% endfor %}
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-8">
+                      <button id="cronSave" type="submit" class="btn btn-success" onclick="save()">确定</button>
+                      <button id="cronClose" type="button" class="btn btn-success" data-dismiss="modal">关闭</button>
+                    </div>
+                  </div>
+                </form1>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+</div>
+{%- endblock end %}
+{% block scripts %}
+<script>
+    window.pageNum = 1;
+    window.totalPage = 1
+    //主菜单切换事件
+    $('a.list-group-item').on("click",function(){
+        $('a.list-group-item').removeClass('list-group-item-warning');
+        $(this).addClass('list-group-item-warning');});
+    //表头复选框click事件
+    $('#cronTableCheck').change(function(){
+        if($(this).prop('checked')){
+            $('#cronTableBody').find(':checkbox').prop('checked', true);
+        }else{
+            $('#cronTableBody').find(':checkbox').prop('checked', false);
+        };
+
+    })
+    //表单复选框click事件
+    $('#cronTableBody').find(':checkbox').on("click",function(){
+        if( $(this).prop('checked')){
+            $('#cronTableBody').find(':checkbox').prop('checked', false);
+            $('#cronTableCheck').prop('checked', false);
+            $(this).prop('checked', true);
+        }
+    })
+    //分页初始化
+    function initPages(){
+        var totalPage = window.totalPage
+        var button = '<button type="button" class="btn btn-default" onclick="pageClick(this)"></button>'
+        var buttonNum = 8
+        var buttonGroup = ""
+        if(totalPage <= (buttonNum-3)){
+            buttonNum = totalPage + 3
+        }
+        for(var i= 1; i<=buttonNum;i++){
+            buttonGroup += button
+        }
+        $('#pageSelect').html(buttonGroup)
+        buttonNum = $('#pageSelect').children().length
+        $('#pageSelect').children(":first-child").text("上一页")
+        $('#pageSelect').children(":last-child").text("共" + String(totalPage) + "页")
+        var lastIndex = $('#pageSelect').children(":last-child").index()
+        $('#pageSelect').children().eq(lastIndex-1).text("下一页")
+        for(var i=1;i<=(buttonNum-3);i++){
+             $('#pageSelect').children().eq(i).text(String(i))
+        }
+    };
+    //分页click事件
+    function pageClick(obj){
+        var totalPage =window.totalPage
+        var thisIndex = $(obj).index()
+        var totalButton = $('#pageSelect').children().length
+        var beginPage = parseInt($('#pageSelect').children().eq(1).text())
+        var endPage = parseInt($('#pageSelect').children().eq((totalButton-3)).text())
+        var buttonChange = 0
+
+        if(0< thisIndex && thisIndex < (totalButton-2)){
+                window.pageNum = parseInt($('#pageSelect').children().eq(thisIndex).text())
+        }else if(thisIndex == 0 &&  (beginPage > 1|| window.pageNum > 1)){
+            if(window.pageNum == beginPage ){
+                var buttonChange = -1
+            }
+             window.pageNum -= 1
+        }else if(thisIndex == totalButton-2 &&  (endPage < totalPage || window.pageNum < totalPage)){
+            if(window.pageNum == endPage){
+                var buttonChange = 1
+            }
+             window.pageNum += 1
+        }
+
+        for(var i = 1;i <= (totalButton-3); i++){
+             var buttonPage = parseInt($('#pageSelect').children().eq(i).text())
+             var thisPageNum = buttonPage + buttonChange
+             $('#pageSelect').children().eq(i).text(String(thisPageNum))
+            if(window.pageNum == thisPageNum){
+                $('#pageSelect').children().removeClass('btn-warning').addClass('btn-default')
+                $('#pageSelect').children().eq(i).removeClass('btn-default').addClass('btn-warning')
+            }
+        };
+
+        getData();
+    }
+    //数据获取事件
+    function getData(){
+        var nameGet = $('#programName').val();
+         $.get(
+             "{{ url_for('spider.find') }}",
+             {nameGet: nameGet, pageNum:window.pageNum},
+             function(data,textStatus){
+                 var dataList = eval("[" + data + "]")
+                 var dataJson = dataList[0]
+                 window.pageNum = dataJson["pageNum"]
+                 if(window.totalPage != dataJson["totalPage"]){
+                     window.totalPage = dataJson["totalPage"]
+                     initPages();
+                 }
+                 var dataHtml = ""
+                 $.each(dataJson["data"],function(index,value){
+                     var cron_id = value["cron_id"]
+                     var name = value["name"]
+                     var url = value["url"]
+                     var spider = value["spider"]
+                     var runTime = value["runTime"]
+                     var keyTime = 1
+                     var keyTimeValue = ""
+                     for(var key in runTime){
+                         keyTime = key
+                         keyTimeValue = runTime[key]
+                     }
+
+                     dataHtml += '<tr><td><input type="checkbox" id="' + cron_id + '"></td><td>' + name + '</td><td>' + url + '</td><td>' + spider + '</td><td value="'+ keyTime +'">' + keyTimeValue + '</td></tr>'
+                 })
+                 $("#cronTableBody").html(dataHtml)
+         })
+    }
+
+    //数据保存函数
+    function save(){
+        $.post(
+             "{{ url_for('spider.save') }}",
+             {idSave:$("#idSave").attr('value'),
+              nameSave:$("#nameSave").attr('value'),
+              urlSave:$("#urlSave").attr('value'),
+              spiderSave:$("#spiderSave").attr('value'),
+              runtimeSave:$("#runtimeSave").find("option:selected").attr('value')
+             },
+             function(){
+                $('#cronClose').click();
+                 getData();
+             });
+    }
+    //修改按钮事件
+    function modify(){
+        if($("#cronTableBody input[type='checkbox']:checked").length == 1){
+            var check = $("#cronTableBody input[type='checkbox']:checked")
+            var id = check.attr('id')
+            var name = check.parent('th').next().text()
+            var url = check.parent('th').next().next().text()
+            var spider = check.parent('th').next().next().next().text()
+            var runTime = check.parent('th').next().next().next().next().attr('value')
+            $("#idSave").attr("value", id)
+            $("#nameSave").attr("value", name)
+            $("#urlSave").attr("value", url)
+            $("#spiderSave").attr("value", spider)
+            $("#runtimeSave").find("option[value='"+ runTime +"']").attr("selected",true)
+        }
+    }
+    //删除数据
+    function del(){
+        if($("#cronTableBody input[type='checkbox']:checked").length >= 1){
+            var check = $("#cronTableBody input[type='checkbox']:checked")
+            check.each(function(){
+                $.post( "{{ url_for('spider.save') }}",
+                    {idSave:$(this).attr('id'),delete:"true"},
+                    function(){})
+        });
+        getData();
+    }}
+    //初始化获取数据
+    $(document).ready(function(){
+        getData();
+    });
+</script>
+{% endblock scripts %}
